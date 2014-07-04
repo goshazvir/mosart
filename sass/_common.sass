@@ -3,13 +3,14 @@
 
 // Fonts
 // --------------------------------------------------
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic)
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic)
 
 =ps
 	font-family: 'PT Sans', sans-serif
 =psb
 	font-family: 'PT Sans Bold', sans-serif
-
+=psi
+	font-family: 'PT Sans Italic', sans-serif
 +font(Intro, Intro)
 =i
 	font-family: "Intro", arial, sans-serif
@@ -72,7 +73,7 @@ body
 	font-size: 18px
 	color: #656565
 	position: relative
-	&.page_article
+	&.page_nav
 		.pagi
 			position: absolute
 			top: 43px
@@ -117,7 +118,7 @@ h3, .h3
 		&:hover
 			text-decoration: none
 			border-color: transparent 
-ul
+ul.list
 	li
 		margin-bottom: 15px
 		padding-left: 36px
@@ -292,7 +293,8 @@ ul
 		.footer__mailinput
 			display: inline-block
 			width: 192px
-			margin-right: 10px
+			height: 18px
+			margin-right: 6px
 			padding: 10px 15px
 			background: #595959
 			+border-radius(3px)
@@ -306,7 +308,8 @@ ul
 		.footer__mailbtn
 			display: inline-block
 			width: 200px
-			padding: 9px 0
+			padding: 8px 0
+			height: 38px
 			text-align: center
 	.footer__map
 		&:hover
@@ -366,31 +369,34 @@ ul
 		margin-left: -300px
 		color: #FFF
 		text-align: center
-	.slider__title
-		+i
-		font-size: 60px
+		&:hover
+			.slider__title
+				p
+					text-decoration: none
+					text-decoration: none
+					border-bottom-color: transparent
+			.slider__meta
+				p
+					border-bottom-color: #fff
+	a
 		text-decoration: none
-		cursor: pointer
-		&:hover
-			text-decoration: none
-		a
-			color: #FFF
-			text-decoration: none
-			border-bottom: 1px solid #fff
-			&:hover
-				text-decoration: none
-				border-bottom-color: transparent 
-	.slider__meta
-		font-style: italic
-		font-size: 20px
-		+ps
-		p
-			display: inline
-			border-bottom: 1px solid transparent 
-		&:hover
+		.slider__title
 			p
-				border-bottom: 1px solid #fff
+				display: inline
+				+i
+				font-size: 60px
+				text-decoration: none
 				cursor: pointer
+				color: #FFF
+				text-decoration: none
+				border-bottom: 1px solid #fff
+		.slider__meta
+			font-size: 20px
+			p
+				display: inline
+				+psi
+				color: #FFF 
+				border-bottom: 1px solid transparent 
 	.slider__navigation
 		height: 333px
 		@extend %in
@@ -416,23 +422,15 @@ ul
 			left: 50%
 		&:hover
 			background: rgba(#000, .5)
-			+transition(all .2s ease-in) 
+			+transition(all .2s ease-in)
 	.slider__prev
 		left: 55px
-		&:hover
-			&:before
-				+sp(arr_left-h)
 		&:before
-			margin-left: -15px
+			margin-left: -14px
 			margin-top: -11px
 			+s(arr_left)
 	.slider__next 
 		right: 55px
-		&:hover
-			&:before
-				+sp(arr_right-h)
-				width: 24px
-				height: 25px
 		&:before
 			margin-left: -9px
 			margin-top: -11px
@@ -544,6 +542,7 @@ ul
 			display: block
 		img
 			display: block
+			border-radius: 50%
 	.news__date
 		margin-bottom: 30px
 		text-align: center
@@ -636,7 +635,7 @@ ul
 		+transition(all .4s ease-in)
 	.mediasearch__btn-i
 		display: block
-		width: 100%
+		width: 1160px
 		padding: 10px 20px
 		position: absolute
 		top: 50%
@@ -687,21 +686,13 @@ ul
 		position: relative
 		&:hover
 			.proj__itemoverlay-black
-				height: 100px
 				position: absolute
 				top: 0
-				bottom: auto 
-				left: 0
-				right: 0
-				
-				height: 160px
+				bottom: auto
+				height: 150px
 				line-height: 150px
-				padding-top: 0
-				padding-bottom: 0
-				text-align: center
 			.proj__itemoverlay-sub
 				display: block
-				
 				display: inline-block
 				vertical-align: middle
 				line-height: 150px
@@ -709,9 +700,6 @@ ul
 				padding-bottom: 10px
 				text-align: center
 			.proj__itemtitle
-				vertical-align: middle
-				display: inline-block
-				line-height: 1.4
 				p
 					border-color: #FFF
 			.proj__itemmeta
@@ -732,8 +720,13 @@ ul
 		overflow: hidden
 		img
 			max-width: 100%
+			margin: 0
 	.proj__itemoverlay-black
-		padding: 25px 20px
+		height: 110px
+		line-height: 110px
+		padding-top: 0
+		padding-bottom: 0
+		text-align: center
 		position: absolute
 		bottom: 10px
 		left: 0
@@ -767,6 +760,9 @@ ul
 			left: 50%
 			margin-left: -3px 
 	.proj__itemtitle
+		vertical-align: middle
+		display: inline-block
+		line-height: 1.4
 		font-size: 20px
 		color: #FFF
 		text-decoration: none
