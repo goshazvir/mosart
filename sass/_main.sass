@@ -106,3 +106,89 @@
 			font-size: 28px
 			color: #1FB0E0
 			text-decoration: none
+
+.media
+	width: 750px
+	height: 435px
+	margin-bottom: 30px
+	position: relative
+	.media__img
+		width: 750px
+		height: 435px
+		overflow: hidden
+		img
+			max-width: 100%
+	.media__overlay
+		padding: 30px
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(#000, .7)
+		font-size: 16px
+		text-align: center
+		color: #FFF
+	.media__meta
+		font-style: italic
+		color: #C0C0C0
+
+.about
+	width: 780px
+	h3, .h3
+		margin-top: 30px
+		margin-bottom: 0
+
+.team
+	margin-top: 30px
+	.team__in
+		width: 820px
+		margin-right: -40px
+		+clr
+	.team__item
+		width: 233px
+		margin-bottom: 25px
+		float: left
+		margin-right: 40px
+		text-align: center
+	.team__media
+		width: 150px
+		height: 150px
+		line-height: 150px
+		border: 10px solid #ededed
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 15px
+		border-radius: 50%
+		overflow: hidden
+		text-align: center
+		img
+			max-width: 100%
+			margin-top: 0
+			margin-bottom: 0
+	.team__descr
+	.team__post
+		font-size: 15px
+		+ps
+		font-style: italic
+		color: #AA3C5A
+	.team__name
+		margin-bottom: 5px
+		font-size: 20px
+		color: #151515 
+	.team__tel
+		margin-bottom: 5px
+		font-size: 16px
+		color: #8C8C8C 
+	.team__mail
+		font-size: 16px
+		color: #8C8C8C
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		a
+			color: #8C8C8C
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+	
+			 
