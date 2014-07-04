@@ -24,10 +24,8 @@
 	margin-left: auto
 	margin-right: auto
 	padding: 17px 32px 20px
-
 // etc
 // --------------------------------------------------
-.box
 
 .btn
 	display: inline-block
@@ -36,7 +34,6 @@
 	color: #FFF
 	text-decoration: none
 	+psb
-
 .btn_more
 	background: #a93b59
 	@include border-radius(3px)
@@ -55,7 +52,6 @@ body
 	font-size: 16px 
 	line-height: 1.4
 	+ps
-
 .out
 	min-width: 1024px
 	max-width: 1200px
@@ -111,7 +107,6 @@ h3, .h3
 	.header__search
 		float: right
 		margin-top: 11px
-
 .logo
 	float: left
 	+hide-text
@@ -158,7 +153,6 @@ h3, .h3
 				+s(fb2)
 	a
 		display: block
-
 // Footer
 // --------------------------------------------------
 .footer
@@ -168,6 +162,22 @@ h3, .h3
 		&:after
 			content: ""
 			display: inline-block
+	.footer__left
+	.footer__right
+	.footer__topper
+	.footer__logo
+	.footer__row
+	.footer__mail
+		.footer__mailinput
+		.footer__mailbtn
+	.footer__map
+	.footer__tel
+	.footer__social
+	.footer__copy
+	.footer__copypar
+	.footer__copydev
+		span
+		a
 
 // index page blocks
 // --------------------------------------------------
@@ -449,6 +459,7 @@ h3, .h3
 .proj
 	@extend %in
 	padding-top: 0
+	padding-bottom: 36px
 	.proj__in
 		padding-top: 53px
 		border-top: 1px solid #e9e9e9 
@@ -462,6 +473,7 @@ h3, .h3
 	.proj__items
 		float: left
 		width: 660px
+		margin-top: 10px
 		margin-left: -20px
 		+clr
 	.proj__item
@@ -469,17 +481,90 @@ h3, .h3
 		width: 310px
 		margin-left: 20px
 		margin-bottom: 20px
-
-
-.list
-	li
-	a
-		font-size: 16px 
-		color: #009ad5
-		text-decoration: none
-		border-bottom: 1px dotted #009ad5
+		position: relative
 		&:hover
-			border-color: transparent 
+			.proj__itemoverlay-black
+				height: 100px
+				position: absolute
+				top: 0
+				bottom: auto 
+				left: 0
+				right: 0
+			.proj__itemoverlay-sub
+				display: block
+			.proj__itemtitle
+				p
+					border-color: #FFF
+		&.proj__item_mod
+			.proj__itemoverlay-black
+				&:after
+					background: #af2543
+			.proj__itemoverlay-sub
+				background: #af2543
+	.proj__itemmedia
+		width: 310px
+		height: 310px
+		line-height: 310px
+		text-align: center
+		overflow: hidden
+		img
+			max-width: 100%
+	.proj__itemoverlay
+	.proj__itemoverlay-black
+		padding: 25px 20px
+		position: absolute
+		bottom: 10px
+		left: 0
+		right: 0
+		background: rgba(#000, .7)
+		&:after
+			content: ""
+			height: 10px
+			background: #32B4E6
+			position: absolute
+			bottom: -10px
+			left: 0
+			right: 0
+	.proj__itemoverlay-sub
+		display: none
+		height: 145px
+		padding: 5px 20px 0
+		background: #32B4E6
+		position: absolute
+		top: 160px
+		left: 0
+		right: 0
+		&:after
+			content: ""
+			width: 6px
+			height: 6px
+			background: #FFF
+			border-radius: 50%
+			position: absolute
+			top: -13px
+			left: 50%
+			margin-left: -3px 
+	.proj__itemtitle
+		font-size: 20px
+		color: #FFF
+		text-decoration: none
+		text-align: center
+		p
+			display: inline
+			border-bottom: 1px solid transparent
+	.proj__itemmeta
+		font-size: 16px
+		color: #FFF
+		text-decoration: none
+		text-align: center
+
+.partneers
+	margin: 52px 0 30px
+	.partneers__in
+		@extend %clr
+		text-align: center
+
+
 
 
 	
