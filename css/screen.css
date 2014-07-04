@@ -40,8 +40,8 @@ body { background: #f3f3f3; font-size: 16px; line-height: 1.4; font-family: "PT 
 .page p { line-height: 1.5; }
 .page img { margin: 35px 0 20px; }
 
-.article { width: 780px; position: relative; }
-.article .article__item { width: 100%; padding-bottom: 35px; }
+.article { width: 780px; position: relative; overflow: hidden; }
+.article .article__item { width: 100%; padding-bottom: 35px; overflow: hidden; }
 
 h2, .h2 { font-size: 28px; font-family: "PT Sans Bold", sans-serif; color: black; }
 
