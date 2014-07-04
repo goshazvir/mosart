@@ -138,6 +138,18 @@ h3, .h3
 		color: #FFF
 		+ps
 .social
+	&.social_mod
+		li
+			&.social__vk
+				a
+					+s(vk)
+					&:hover
+						+sp(vk)
+			&.social__fb
+				a
+					+s(fb)
+					&:hover
+						+sp(fb_h)
 	ul
 		+clr
 	li
@@ -159,26 +171,79 @@ h3, .h3
 	background: #2B2B2B 
 	.footer__in
 		@extend %in
+		padding-top: 56px
+		+clr
 		&:after
 			content: ""
 			display: inline-block
 	.footer__left
+		width: 480px
+		float: left
+		color: #CACACA 
 	.footer__right
+		width: 432px
+		padding-left: 48px
+		float: left
+		color: #FFF 
+		.footer__topper
+			margin-bottom: 48px
+		a
+			color: #32b4e6
+			text-decoration: none
 	.footer__topper
+		margin-bottom: 20px
 	.footer__logo
+		+s(logo2)
+		display: inline-block
 	.footer__row
+		margin-bottom: 20px
+		+clr
 	.footer__mail
+		font-size: 0
 		.footer__mailinput
+			display: inline-block
+			width: 192px
+			margin-right: 10px
+			padding: 10px 15px
+			background: #595959
+			+border-radius(3px)
+			font-size: 15px
+			color: #141414
+			+placeholder
+				color: #141414
+			&:focus
+				+placeholder
+					color: transparent
 		.footer__mailbtn
+			display: inline-block
+			width: 200px
+			padding: 9px 0
+			text-align: center
 	.footer__map
 	.footer__tel
+		float: left
+		font-size: 26px
+		color: #FFF
 	.footer__social
+		float: right
 	.footer__copy
+		clear: both
+		+clr
 	.footer__copypar
+		float: left
+		color: #525252 
 	.footer__copydev
+		float: right
+		font-style: italic
 		span
+			margin-right: 5px
+			color: #525252 
 		a
-
+			color: #32b4e6
+			text-decoration: underline
+			color: #00C056
+			&:hover
+				text-decoration: none
 // index page blocks
 // --------------------------------------------------
 .slider 
@@ -426,6 +491,7 @@ h3, .h3
 .mediasearch
 	margin-bottom: 60px
 	position: relative
+	overflow: hidden
 	.mediasearch__bg
 		height: 148px
 		background: url("../img/mediasearch.jpg") 
@@ -436,6 +502,7 @@ h3, .h3
 			background: url("../img/mediasearch_h.jpg")
 			+cover
 			+transition(all .2s ease-in)
+			+transform(scale(1.03))
 	.mediasearch__btn-i
 		display: block
 		width: 100%
